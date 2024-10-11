@@ -1,49 +1,513 @@
-# History files
-.Rhistory
-.Rapp.history
-
-# Session Data files
-.RData
-.RDataTmp
-
-# User-specific files
-.Ruserdata
-
-# Example code in package build process
-*-Ex.R
-
-# Output files from R CMD build
-/*.tar.gz
-
-# Output files from R CMD check
-/*.Rcheck/
-
-# RStudio files
-.Rproj.user/
-
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
-
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
-
-# knitr and R markdown default cache directories
-*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
-
-# R Environment Variables
-.Renviron
-
-# pkgdown site
-docs/
-
-# translation temp files
-po/*~
-
-# RStudio Connect folder
-rsconnect/
+# Donna Gas Station
+library(car)
+library(ggplot2)
+library(gridExtra)
+read.csv("Donna.csv", header = TRUE, sep = ",", quote = '"')
+ggplot(data = New_clean_Donna) + geom_bar(mapping=aes(x=D_Price, color = week_num))
+New_clean_Donna
+view(New_clean_Donna)
+colnames(clean_Donna)
+fivenum(New_clean_Donna$D_Gal_sold)
+fivenum(New_clean_Donna$week_num)
+fivenum(New_clean_Donna$D_Price)
+fivenum(New_clean_Donna$competitor_price)
+str(New_clean_Donna)
+plot_<- ggplot(New_clean_Donna, aes(x= weekday, y= D_Price)) + geom_point()
+plot_WDprice <- ggplot(New_clean_Donna, aes(x= weekday, y= D_Price)) + geom_point()
+plot_WDprice
+plot_D_price <- ggplot(New_clean_Donna, aes(x= D_Price, y= competito )) + geom_point()
+plot_D_price
+plot_D_price <- ggplot(New_clean_Donna, aes(x= D_Price, y= competitor_price )) + geom_point()
+plot_D_price
+plot_price_gal <- ggplot(New_clean_Donna, aes(x= D_Price, y= D_Gal_sold)) + geom_point()
+plot_price_gal
+source("~/BASIC-filter-newDF.R")
+plot_D_price_r <- plot_D_price +  geom_smooth(method = 'lm')
+plot_D_price_r <- plot_D_price +  geom_smooth(method = 'lm')
+plot_D_price_r
+plot_D_price_r <- plot_D_price +  geom_smooth(method = 'lm')
+library(gridExtra)
+library(ggplot2)
+library(car)
+library(tidyverse)
+plot_D_price_r
+plot_D_price_r <- plot_D_price +  geom_smooth(method = 'lm')
+plot_D_price_r
+plot_Dprice <- ggplot(New_clean_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_Dprice
+plot_D_price_r <- plot_D_price +  geom_smooth(method = 'lm')
+plot_D_price_r
+plot_D_price_r
+summary(plot_D_price_r)
+summary(plot_D_price)
+model_1 <- lm(D_Price ~ competitor_price, New_clean_Donna)
+model_1
+final_Donna <- New_clean_Donna
+final_Donna <- New_clean_Donna
+final_Donna
+model_1 <- lm(D_Price ~ competitor_price, final_Donna)
+model_1
+summary(model_1)
+pred_frame_1 <- data.frame(competitor_price c(= 3.56, 3.66))
+pred_frame_1 <- data.frame(competitor_price = c( 3.56, 3.66))
+predict(model_1, newdata = pred_frame_1)
+colnames(Donnas)
+colnames(final_Donna)
+model_2 <- lm(D_Price ~ competitor_price + D_Gal_sold), data = final_Donna)
+model_2 <- lm(D_Price ~ competitor_price + D_Gal_sold, data = final_Donna)
+model_2
+summary(model_2)
+pred_frame_2 < -data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+pred_frame_2 < -data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+pred_frame_2 < -data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+pred_frame_2 < -data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5)
+predict(model_2, pred_frame_2)
+source("~/.active-rstudio-document")
+pred_frame_2 < -data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5)
+)
+pred_frame_2 < -data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+pred_frame_2 <- data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+str(final_Donna)
+plot_Dprice <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+library(ggplot2)
+plot_Dprice <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_Dprice
+getwd()
+library(gridExtra)
+cor(final_Donna$competitor_price, final_Donna$D_Price)
+plot_Dprice <- ggplot(final_Donna, aes(x = D_Gal_sold, y = D_Price)) + geom_point()
+plot_Dprice
+plot_Dprice <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_Gal_price <- ggplot(final_Donna, aes(x = D_Gal_sold, y = D_Price)) + geom_point()
+plot_Gal_price
+plot_Gal_price <- ggplot(final_Donna, aes(x = D_Price, y = D_Gal_sold)) + geom_point()
+plot_Gal_price
+plot_Dprice <- ggplot(final_Donna, aes(x = competitor_price, y = D_Gal_sold)) + geom_point()
+plot_Dprice <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_C_G <- ggplot(final_Donna, aes(x = competitor_price, y = D_Gal_sold)) + geom_point()
+plot_C_G
+plot_Gal_price
+plot_C_G
+plot_C_G
+plot_Gal_price
+cor(final_Donna$competitor_price, final_Donna$D_Gal_sold)
+cor(final_Donna$D_Price, final_Donna$D_Gal_sold)
+cor(final_Donna$D_Price, final_Donna$competitor_price)
+cor(final_Donna)
+corr = cor(final_Donna)
+head(final_Donna)
+corr = cor(final_Donna)
+corr = cor(final_Donna, c = 3.4)
+corr = cor(final_Donna[ 3.3:3.5 ] )
+corr
+cor(final_Donna[ 3.3:3.5 ] )
+cor(final_Donna[ 3.3:3.7 ] )
+cor(final_Donna[ c(3,4,5) ] )
+cor(final_Donna[ 3:5 ] )
+corr = cor(final_Donna[ 3:5 ] )
+corrgram(corr)
+library(corr)
+lm(final_Donna$D_Price ~ final_Donna$competitor_price)
+lm(final_Donna$D_Price ~ final_Donna$D_Gal_sold)
+plot_D_price_r <- plot_D_price +  geom_smooth(method = 'lm')
+plot_D_price_r
+lm(final_Donna$D_Price ~ final_Donna$competitor_price)
+plot_Dprice <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_prices
+plot_prices_r <- plot_prices +  geom_smooth(method = 'lm')
+plot_prices_r
+plot_Dprice
+plot_prices_r
+plot_Dprice
+plot_prices_r
+plot_prices_r <- plot_prices +  geom_smooth(method = 'lm')
+plot_prices_r
+plot_D_price_r <- plot_D_price +  geom_smooth(method = 'lm')
+plot_prices_r <- plot_prices +  geom_smooth(method = 'lm')
+plot_prices <- ggplot(final_Donna, aes(x = D_price, y = competitor_price)) + geom_point()
+plot_prices_r <- plot_prices +  geom_smooth(method = 'lm')
+plot_prices_r
+plot_prices <- ggplot(final_Donna, aes(x = D_price, y = competitor_price)) + geom_point()
+plot_prices
+plot_prices_r <- plot_prices +  geom_smooth(method = 'lm')
+plot_prices_r
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_prices_r <- plot_prices +  geom_smooth(method = 'lm')
+plot_prices_r
+plot_prices <- ggplot(final_Donna, aes(x = D_Price, y = competitor_price)) + geom_point()
+plot_prices_r <- plot_prices +  geom_smooth(method = 'lm')
+plot_prices_r
+install.packages(corrgram)
+install.packages("corrgram")
+corr = cor(final_Donna[ 3:5 ] )
+corrgram(corr)
+corr
+corrgram(corr)
+corrgram(corr)
+library(corrgram)
+corrgram(corr)
+#holding place to the thing we want to predict
+pred_frame_1 <- data.frame(competitor_price c(= 3.56, 3.66))
+pred_frame_1 <- data.frame(competitor_price c(= 3.56, 3.66))
+pred_frame_1 <- data.frame(competitor_price c= ( 3.56, 3.66))
+pred_frame_1 <- final_Donna(competitor_price c = ( 3.56, 3.66))
+pred_frame_1 <- data.frame(competitor_price c( 3.56, 3.66))
+pred_frame_1 <- data.frame(competitor_price, c( 3.56, 3.66))
+pred_frame_1 <- data.frame(final_Donna$competitor_price, c( 3.56, 3.66))
+plot_prices_r <- plot_prices +  geom_smooth(method = 'lm')
+plot_prices_r
+colnames(final_Donna)
+model_2 <- lm(D_Price ~ competitor_price + D_Gal_sold, data = final_Donna)
+summary(model_2)
+cor(final_Donna$competitor_price, final_Donna$D_Price)
+pred_frame_1 <- data.frame(competitor_price c(= 3.56, 3.66))
+pred_frame_1 <- data.frame(final_Donna$competitor_price c(= 3.56, 3.66))
+pred_frame_1 <- data.frame(final_Donna$competitor_price, c( 3.56, 3.66))
+pred_frame_1
+plot_prices
+model_1
+View(model_1)
+View(model_1)
+View(model_1)
+summary(model_1)
+summary(model_1)
+pred_frame_1
+predict(model_1, newdata = pred_frame_1)
+predict(model_1, newdata = pred_frame_1)
+pred_frame_1 <- data.frame(competitor_price = c(3.56, 3.66))
+predict(model_1, newdata = pred_frame_1)
+model_1 <- lm(D_Price ~ competitoer_price, final_Donna)
+model_1 <- lm(D_Price ~ competiter_price, final_Donna)
+model_1 <- lm(D_Price ~ competitor_price, final_Donna)
+predict(model_1, newdata = pred_frame_1)
+colnames(final_Donna)
+model_2
+model_2 <- lm(formula = D_Price ~ competitor_price + D_Gal_sold, data = final_Donna)
+model_2
+summary(model_2)
+pred_frame_2
+pred_frame_2 < -data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5)
+pred_frame_2
+pred_frame_2 < -data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5)
+pred_frame_2
+pred_frame_2 < -data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+pred_frame_2
+pred_frame_2 < -data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+pred_frame_2 < -data.frame(competitor_price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+pred_frame_2
+pred_frame_2 < -data.frame(competitor_price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+predict(model_2, pred_frame_2)
+model_2
+pred_frame_2
+predict(model_2, pred_frame_2)
+pred_frame_2 < -data.frame(final_Donna$competitor_price = c(3.55, 3.66), final_Donna$D_Gal_sold = c(968.5, 968.5))
+pred_frame_2 < -data.frame(final_Donna$competitor_price = c(3.55, 3.66), final_Donna$D_Gal_sold = c(968.5, 968.5))
+pred_frame_2
+pred_frame_1
+predict(model_2, pred_frame_2)
+predict(model_2, newdata = pred_frame_2)
+predict(model_1, newdata = pred_frame_1)
+model_2 <- lm(D_Price ~ competitor_price + D_Gal_sold, data = final_Donna)
+pred_frame_2 <- data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+predict(model_2, newdata = pred_frame_2)
+model_2
+colnames(final_Donna)
+model_2 <- lm(D_Price ~ competitor_price + D_Gal_sold, data = final_Donna)
+summary(model_2)
+pred_frame_2 <- data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+pred_frame_1 <- data.frame(competitor_price = c(3.56, 3.66))
+predict(model_1, newdata = pred_frame_1)
+predict(model_2, newdata = pred_frame_2)
+model_2
+pred_frame_2
+predict(model_2, newdata = pred_frame_2)
+pred_frame_2 <- data.frame(competitor_price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+predict(model_2, newdata = pred_frame_2)
+model_2 <- lm(D_Price ~ D_Price + D_Gal_sold, data = final_Donna)
+summary(model_2)
+pred_frame_2 <- data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+pred_frame_1 <- data.frame(competitor_price = c(3.56, 3.66))
+pred_frame_2 <- data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+model_2 <- lm(D_Price ~ competitor_price + D_Gal_sold, data = final_Donna)
+pred_frame_2 <- data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+model_2 <- lm(D_Price ~ D_Price + D_Gal_sold, data = final_Donna)
+model_2 <- lm(D_Price ~ competitor_price + D_Gal_sold, data = final_Donna)
+predict(model_2, newdata = pred_frame_2)
+model_2 <- lm(D_Price ~ D_Price + D_Gal_sold, data = final_Donna)
+pred_frame_2 <- data.frame(D_Price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+model_2 <- lm(D_Price ~ competitor_price + D_Gal_sold, data = final_Donna)
+model_2 <- lm(D_Price ~ D_Price + D_Gal_sold, data = final_Donna)
+model_2 <- lm(D_Price ~ competitor_price + D_Gal_sold, data = final_Donna)
+pred_frame_2 <- data.frame(competitor_price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+predict(model_2, newdata = pred_frame_2)
+colnames(final_Donna)
+summary(model_2)
+summary(model_1)
+cor(insurance$age, insurance$charges)
+cor(final_Donna$competitor_price, final_Donna$D_Price)
+str(final_Donna)
+insurance$sex <- as.factor(insurance$sex)
+insurance$sex
+print("Hello Samuel How are you?")
+print("Are you okay?")
+print("What a Jade, Gold, 14k ring?")
+final_Donna$week_num
+final_Donna$weekday
+final_Donna$weekday <- as.factor(final_Donna$weekday)
+final_Donna$weekday
+final_Donna$week_num <- as.factor(final_Donna$week_num)
+final_Donna$week_num
+model_F1 <- lm(D_Price ~ week_num + D_Gal_sold, data = final_Donna)
+summmary(model_F1)
+summary(model_F1)
+pred_frame_F1 <- data.frame(week_num = c(1,2,3,4,5,6,7,8), D_Gal_sold = c(968.5, 968.5))
+predict(model_F1, newdata = pred_frame_F1)
+anova(model_1, model_2)
+model_F1 <- lm(week_num ~ D_Price + D_Gal_sold, data = final_Donna)
+model_F1 <- lm(week_num ~ D_Price + D_Gal_sold, data = final_Donna)
+model_F1 <- lm(weekday ~ D_Price + D_Gal_sold, data = final_Donna)
+View(final_Donna)
+model_F1 <- lm(weekday ~ D_Price + D_Gal_sold, data = final_Donna)
+model_F1 <- lm(D_Price ~ D_Gal_sold + weekday, data = final_Donna)
+model_F1 <- lm(D_Price ~ D_Gal_sold + weekday, data = final_Donna)
+predict(model_F1, newdata = pred_frame_F1)
+pred_frame_F1 <- data.frame(weekday = c(Monday, Sunday), D_Gal_sold = c(968.5, 968.5))
+pred_frame_F1 <- data.frame(weekday = c(Saturday, Sunday), D_Gal_sold = c(968.5, 968.5))
+pred_frame_F1 <- data.frame(weekday = c(Tuesday, Sunday), D_Gal_sold = c(968.5, 968.5))
+model_F1 <- lm(D_Price ~ D_Gal_sold + weekday, data = final_Donna)
+summary()
+summary(model_F1)
+summary(pred_frame_F1)
+predict(model_F1, newdata = pred_frame_F1)
+pred_frame_1 <- data.frame(competitor_price = c(3.56, 3.66))
+predict(model_1, newdata = pred_frame_1)
+model_2 <- lm(D_Price ~ competitor_price + D_Gal_sold, data = final_Donna)
+model_2 <- lm(D_Price ~ competitor_price + D_Gal_sold, data = final_Donna)
+summary(model_2)
+pred_frame_2 <- data.frame(competitor_price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+predict(model_2, newdata = pred_frame_2)
+pred_frame_F1 <- data.frame(weekday = c("Tuesday", "Sunday"), D_Gal_sold = c(968.5, 968.5))
+predict(model_F1, newdata = pred_frame_F1)
+model_F2 <- lm(competitor_price ~ D_Gal_sold + weekday, data = final_Donna)
+predict(model_F2, newdata = pred_frame_F1)
+ggplot(data=final_Donna)+geom_point(mapping=aes(x = D_Price, y = D_Gal_sold,color=weekday))+facet_wrap(~weekday)
+library(ggplot2)
+ggplot(data=final_Donna)+geom_point(mapping=aes(x = D_Price, y = D_Gal_sold,color=weekday))+facet_wrap(~weekday)
+ggplot(data=final_Donna)+geom_point(mapping=aes(x = competitor_price, y = D_Gal_sold,color=weekday))+facet_wrap(~weekday)
+ggplot(data = New_clean_Donna, mapping = aes(x = D_Price, y = D_Gal_sold)) + geom_point(mapping = aes(color = weekday))+ geom_smooth()
+ggplot(data = New_clean_Donna, mapping = aes(x = competitor_price, y = D_Gal_sold)) + geom_point(mapping = aes(color = weekday))+ geom_smooth()
+ggplot(data = New_clean_Donna) + geom_bar(mapping=aes(x = weekday), position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(aes(x= week_num, fill = "weekday"), bins = 20)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 10)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 10, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 30, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna, mapping = aes(x = D_Price, y = D_Gal_sold)) + geom_point(mapping = aes(color = weekday))+ geom_smooth()
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = week_num), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = D_Price), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = week_num), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 5, color = "blue", fill = "white", position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 5, color = "blue", position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 5, color = "blue")
+pred_frame_2
+pred_frame_1
+predict(model_1, pred_frame_1)
+model_1
+model_2
+pred_frame_2
+predict(model_1, pred_frame_1)
+summary(pred_frame_1)
+summary(model_1)
+plot_region <- ggplot(insurance, aes(x= region, y= charges)) + geom_point()
+plot_region
+plot_bmi <- ggplot(insurance, aes(x= bmi, y= charges)) + geom_point()
+plot_bmi
+plot_age_r <- plot_age +  geom_smooth(method = 'lm')
+plot_age_r
+mod1 <- lm(charges~age, data = insurance)
+summary(mod1)
+<- data.frame(age = c(22, 32, 52))
+pred_1<- data.frame(age = c(22, 32, 52))
+predict(mod2, newdata = pred_2)
+mod2
+pred_2
+lm(charges ~ age + bmi, data = insurance)
+moddel_1
+model_1
+summary(model_1)
+summary(model_2)
+summary(model_2)
+summary(model_1)
+summary(model_2)
+#Build model
+model_2 <- lm(D_Price ~ competitor_price + D_Gal_sold, data = final_Donna)
+summary(model_2)
+# predict
+pred_frame_2 <- data.frame(competitor_price = c(3.55, 3.66), D_Gal_sold = c(968.5, 968.5))
+predict(model_2, newdata = pred_frame_2)
+summary(model_2)
+summary(model_1)
+summary(model_1)
+1        2
+summary(model_1)
+summary(model_2)
+View(final_Donna)
+tally
+tally(final_Donna$week_num)
+library(dplyr)})
+library(dplyr)
+tally(final_Donna$week_num)
+tally("final_Donna$week_num")
+tally("final_Donna$weekdays")
+library(tidyverse)
+tally("final_Donna$week_num")
+)
+tally("final_Donna$week_num")
+library(janitor)
+tally("final_Donna$week_num")
+library(ggplot2)
+tally("final_Donna$week_num")
+final_Donna %>% group_by(week_num, weekday) %>% tally(Sort = True)
+ibrary(mosaic)
+library(mosaic)
+ibrary(mosaic)
+ibrary(mosaic)
+library(supernova)
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+str(final_Donna)
+library(ggplot2)
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+cor(final_Donna$D_Price, final_Donna$competitor_price)
+cor(final_Donna$competitor_price, final_Donna$D_Price)
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+library(ggplot2)
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+corrgram(corr)
+library(corrgram)
+corrgram(corr)
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+library(gridExtra)
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+library(tidyverse)
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+library(car)
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_age
+plot_prices
+plot_prices <- ggplot(final_Donna, aes(x = D_Price, y = competitor_price)) + geom_point()
+plot_prices
+plot_age_r <- plot_age +  geom_smooth(method = 'lm')
+plot_age_r
+plot_prices_r
+plot_prices_r <- plot_prices +  geom_smooth(method = 'lm')
+plot_prices_r
+summary(plot_prices_r)
+summary(model_1)
+model_1
+model_1-rev <- lm(formula = competitor_price ~ D_Price, data = final_Donna)
+model_1-rev <- lm(formula = competitor_price ~ D_Price, data = final_Donna)
+model_1_rev <- lm(formula = competitor_price ~ D_Price, data = final_Donna)
+model_1_rev
+summary(model_1_rev)
+q()
+pred_frame_1 <- data.frame(competitor_price = c(3.56, 3.66))
+predict(model_1, newdata = pred_frame_1)
+pred_frame_2 <- data.frame(competitor_price = c(3.55, 3.66, 3.71), D_Gal_sold = c(968.5, 968.5, 968.5))
+predict(model_2, newdata = pred_frame_2)
+ggplot(data = New_clean_Donna) + geom_bar(mapping=aes(x = week_num), position="dodge")
+library(ggplot2)
+ggplot(data = New_clean_Donna) + geom_bar(mapping=aes(x = week_num), position="dodge")
+ggplot(data = New_clean_Donna, mapping = aes(x = D_Price, y = D_Gal_sold)) + geom_point(mapping = aes(color = weekday))+ geom_smooth()
+ggplot(data = New_clean_Donna, mapping = aes(x = competitor_price, y = D_Gal_sold)) + geom_point(mapping = aes(color = weekday))+ geom_smooth()
+ggplot(data=New_clean_Donna)+geom_point(mapping=aes(x = D_Price, y = D_Gal_sold,color=weekday))+facet_wrap(~weekday)
+ggplot(data = New_clean_Donna, mapping = aes(x = competitor_price, y = D_Gal_sold)) + geom_point(mapping = aes(color = weekday))+ geom_smooth()
+ggplot(data=New_clean_Donna)+geom_point(mapping=aes(x = D_Price, y = D_Gal_sold,color=weekday))+facet_wrap(~weekday)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 10)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 10)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 10, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 40, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 1, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 3, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 4, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Gal_sold, fill = weekday), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 5, position="dodge")
+boxplot(New_clean_Donna$D_Price)
+sapply(New_clean_Donna[c('D_Price', 'D_Gal_sold', 'competitor_price')], fivenum)
+library(ggplot2)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 1, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 2, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 50, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 20, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 25, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 30, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 15, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 12, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 11, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 10, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=competitor_price, fill = weekday), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 5)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 10)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 20)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 30)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=competitor_price, fill = weekday), bins = 30)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=competitor_price, fill = weekday), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 5, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 10, position="dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 5)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 10)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 15)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=competitor_price, fill = weekday), bins = 15)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=competitor_price, fill = weekday), bins = 12)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=competitor_price, fill = weekday), bins = 18)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=competitor_price, fill = weekday), bins = 10)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=competitor_price, fill = weekday), bins = 10)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 15)
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=competitor_price, fill = weekday), bins = 10, position = "dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=competitor_price, fill = weekday), bins = 2, position = "dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=competitor_price, fill = weekday), bins = 4, position = "dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=competitor_price, fill = weekday), bins = 5, position = "dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 5, position = "dodge")
+ggplot(data = New_clean_Donna) + geom_histogram(mapping=aes(x=D_Price, fill = weekday), bins = 10)
+duplicated(New_clean_Donna)
+boxplot(New_clean_Donna$competitoe_price)
+library(ggplot2)
+boxplot(New_clean_Donna$competitoe_price)
+library(janitor)
+library(ggplot2)
+boxplot(New_clean_Donna$competitoe_price)
+library(dplyr)
+boxplot(New_clean_Donna$competitoe_price)
+library(tidyverse)
+boxplot(New_clean_Donna$competitoe_price)
+boxplot(New_clean_Donna$competitoe_price)
+library(tidyverse)
+library(dplyr)})
+library(tidyverse)
+library(dplyr)
+library(janitor)
+library(ggplot2)
+boxplot(New_clean_Donna$competitoe_price)
+boxplot(New_clean_Donna$competitor_price)
+boxplot(New_clean_Donna$D_Price)
+boxplot(New_clean_Donna$competitor_price)
+boxplot(New_clean_Donna$competitor_price)
+boxplot(New_clean_Donna$D_Price)
+ggplot(data=New_clean_Donna)+geom_point(mapping=aes(x = D_Price, y = D_Gal_sold,color=weekday))
+ggplot(data = New_clean_Donna, mapping = aes(x = D_Price, y = D_Gal_sold)) + geom_point(mapping = aes(color = weekday))+ geom_smooth()
+ggplot(data = New_clean_Donna, mapping = aes(x = competitor_price, y = D_Gal_sold)) + geom_point(mapping = aes(color = weekday))+ geom_smooth()
+plot_prices <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_prices_r <- plot_prices +  geom_smooth(method = 'lm')
+plot_Dprice <- ggplot(final_Donna, aes(x = competitor_price, y = D_Price)) + geom_point()
+plot_prices
+plot_prices_r
+plot_prices_r
