@@ -1,5 +1,7 @@
 # Video-Game-Sales-Analysis
 
+[ONGOING]
+
 Video games are everywhere therefore it must be a booming industry with sales bursting out the bar charts. 
 Let's have an in-depth look at how North America’s video games market compares to others on a global scale. 
 What genre is most popular to play in recent years? 
